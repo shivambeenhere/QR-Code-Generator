@@ -48,8 +48,6 @@ addSliderEventListeners();
 
 // URL / TEXT / DATA
 const dataInput = document.querySelector('#data');
-// FORMAT
-const imageFormat = document.querySelector('input[name="format"]:checked');
 // BUTTON
 const submitButton = document.querySelector('#cta');
 
@@ -118,7 +116,7 @@ const onSubmit = () => {
     const bgColor = backgroundColorPicker.value;
     const size = sizeSlider.value;
     const qZone = marginSlider.value;
-    const format = imageFormat.value;
+    const format = document.querySelector('input[name="format"]:checked').value;
 
     const parameters = prepareParameters({ data, color, bgColor, size, qZone, format });
 
